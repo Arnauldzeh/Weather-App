@@ -80,6 +80,7 @@ def weather_app():
             data = get_weather(lat, lon)
             if data:
                 st.write("Météo à {}:".format(city))
+                st.write("Température: {}°F".format(data["main"]["temp"]))
                 st.write("Humidité: {}%".format(data["main"]["humidity"]))
                 st.write("Pression: {} hPa".format(data["main"]["pressure"]))
                 forecast_data = get_forecast_weather(city)
